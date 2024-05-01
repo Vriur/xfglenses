@@ -11,15 +11,18 @@ CONFIG += c++17
 SOURCES += \
     customslider.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    modelsdialog.cpp
 
 HEADERS += \
     customslider.h \
-    mainwindow.h
+    mainwindow.h \
+    modelsdialog.h
 
 FORMS += \
     customslider.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    modelsdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "customslider.h"
+
+using std::vector;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -14,9 +15,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_ModelMenuCmBox_currentTextChanged(const QString &arg1)
+void MainWindow::on_modelsBtn_clicked()
 {
-    CustomSlider *instance = new CustomSlider(this);
-    ui->horizontalLayout_4->addWidget(instance);
+    this->modelsDialog = new ModelsDialog(this);
+    this->modelsDialog->show();
+    this->hide();
 }
 

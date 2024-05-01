@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModelsDialog</class>
+ <widget class="QDialog" name="ModelsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QComboBox" name="ModelMenuCmBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>120</y>
+     <width>167</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>167</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <item>
+    <property name="text">
+     <string>Model Menu</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Chang-Refsdal</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>SIS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>NIS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Transparent Sphere</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Elliptic Model</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>King Model</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Truncated King</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Hubble Model</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>De Vancouleur</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Spiral Model</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Multipole Model</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rotation Lens</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Double Plane Model</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Uniform Ring</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Second Order</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Elliptic SIS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Elliptic King</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Elliptic Hubble</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Elliptic NIS</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Elliptic Plummer</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kassiola-Kovner</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>NFW</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Barkana</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

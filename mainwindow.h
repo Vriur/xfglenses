@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "modelsdialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,9 +19,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_ModelMenuCmBox_currentTextChanged(const QString &arg1);
+    void on_modelsBtn_clicked();
 
 private:
     Ui::MainWindow *ui;
+    ModelsDialog *modelsDialog;
 };
 #endif // MAINWINDOW_H
