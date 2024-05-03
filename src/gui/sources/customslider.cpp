@@ -1,8 +1,5 @@
-#include "customslider.h"
+#include "src/gui/headers/customslider.h"
 #include "ui_customslider.h"
-
-/*#include <QDebug>
-qDebug() << Lo que quiere mostrar;*/
 
 using std::string;
 using std::round;

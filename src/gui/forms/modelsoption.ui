@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModelsOption</class>
+ <widget class="QDialog" name="ModelsOption">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>351</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="ModelMenuCmBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>170</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>170</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+       <item>
+        <property name="text">
+         <string>Model Menu</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Chang-Refsdal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SIS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NIS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Transparent Sphere</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Elliptic Model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>King Model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Truncated King</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hubble Model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>De Vancouleur</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Spiral Model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Multipole Model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rotation Lens</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Double Plane Model</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Uniform Ring</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Second Order</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Elliptic SIS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Elliptic King</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Elliptic Hubble</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Elliptic NIS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Elliptic Plummer</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kassiola-Kovner</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NFW</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Barkana</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="DeleteBtn">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>105</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>105</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QScrollArea" name="SlidersArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>155</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>155</height>
+      </size>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="ScrollContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>380</width>
+        <height>153</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="ScrollLayout"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
