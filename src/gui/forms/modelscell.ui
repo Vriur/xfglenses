@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ModelsOption</class>
- <widget class="QDialog" name="ModelsOption">
+ <class>ModelsCell</class>
+ <widget class="QDialog" name="ModelsCell">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -241,7 +241,11 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <layout class="QHBoxLayout" name="ScrollLayout"/>
+        <layout class="QHBoxLayout" name="ScrollLayout">
+         <property name="spacing">
+          <number>1</number>
+         </property>
+        </layout>
        </item>
       </layout>
      </widget>

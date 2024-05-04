@@ -1,6 +1,8 @@
 #ifndef CUSTOMSLIDER_H
 #define CUSTOMSLIDER_H
 
+#include "src/models/headers/modelparameter.h"
+
 #include <QWidget>
 
 using std::string;
@@ -15,7 +17,7 @@ class CustomSlider : public QWidget
     Q_OBJECT
 
 public:
-    explicit CustomSlider(QWidget *parent = nullptr, const string &name = "", const vector<double> &sliderParams = vector<double>());
+    explicit CustomSlider(QWidget *parent = nullptr, ModelParameter* parameter = nullptr);
     ~CustomSlider();
     void setName(string name);
     string getName();

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+#include "src/models/headers/model.h"
 #include "src/gui/headers/causticdialog.h"
 #include "src/gui/headers/fittingdialog.h"
 #include "src/gui/headers/helpdialog.h"
@@ -11,6 +12,8 @@
 #include "src/gui/headers/modelsdialog.h"
 #include "src/gui/headers/obipdialog.h"
 #include "src/gui/headers/trackdialog.h"
+
+using std::vector;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -25,6 +28,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    vector<Model*> simulationModels;
 
 private slots:
     void on_CausticBtn_clicked();

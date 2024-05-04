@@ -4,17 +4,17 @@
 using std::string;
 using std::round;
 
-CustomSlider::CustomSlider(QWidget *parent, const string &name, const vector<double> &sliderParams)
+CustomSlider::CustomSlider(QWidget *parent, ModelParameter *parameter)
     : QWidget(parent)
     , ui(new Ui::CustomSlider)
 {
     ui->setupUi(this);
 
-    this->name = name;
-    this->currentValue = sliderParams[0];
-    this->initialValue = sliderParams[0];
-    this->maxValue = sliderParams[1];
-    this->minValue = sliderParams[2];
+    this->name = parameter->getName();
+    this->currentValue = parameter->getCurrentValue();
+    this->initialValue = parameter->getCurrentValue();
+    this->maxValue = parameter->getMaxValue();
+    this->minValue = parameter->getMinValue();
 
     ui->NameLabel->setText(QString::fromStdString(name));
     ui->ValueLabel->setText(QString::number(currentValue));

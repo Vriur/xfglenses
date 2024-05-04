@@ -1,8 +1,6 @@
 #include "src/gui/headers/mainwindow.h"
 #include "ui_mainwindow.h"
 
-using std::vector;
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -52,7 +50,7 @@ void MainWindow::on_LightCurveBtn_clicked()
 
 void MainWindow::on_ModelsBtn_clicked()
 {
-    this->modelsDialog = new ModelsDialog(this);
+    this->modelsDialog = new ModelsDialog(this, simulationModels);
     this->modelsDialog->show();
     //this->hide();
 }
