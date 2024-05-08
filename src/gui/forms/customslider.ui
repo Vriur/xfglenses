@@ -45,13 +45,13 @@
     <item alignment="Qt::AlignHCenter">
      <widget class="QSlider" name="Slider">
       <property name="maximum">
-       <number>100</number>
+       <number>0</number>
       </property>
       <property name="singleStep">
        <number>1</number>
       </property>
       <property name="value">
-       <number>50</number>
+       <number>0</number>
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>

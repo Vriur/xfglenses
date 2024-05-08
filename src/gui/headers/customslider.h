@@ -23,8 +23,9 @@ public:
     string getName();
     void setCurrentValue(double currentValue);
     double getCurrentValue();
-    int mapDoubleToInt(double currentValue);
-    double mapIntToDouble(int currentValue);
+
+signals:
+    void updateParameterValue(double value);
 
 private slots:
     void updateLabel(int currentValue);

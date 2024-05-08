@@ -1,6 +1,6 @@
 #include "../headers/modelparameter.h"
 
-ModelParameter::ModelParameter(string name, double currentValue, double maxValue, double minValue){
+ModelParameter::ModelParameter(string name, double currentValue, double minValue, double maxValue){
     this->name = name;
     this->currentValue = currentValue;
     this->maxValue = maxValue;

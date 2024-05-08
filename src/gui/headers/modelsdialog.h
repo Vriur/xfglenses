@@ -34,7 +34,7 @@ public slots:
     void changeSimulationModel(string modelName, int index);
 
 signals:
-    void loadParameters(vector<ModelParameter*> parameters);
+    void loadParameters(vector<ModelParameter*> parameters, int index);
 
 private slots:
     void on_AddBtn_clicked();

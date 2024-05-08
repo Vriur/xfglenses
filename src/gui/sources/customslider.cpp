@@ -18,7 +18,9 @@ CustomSlider::CustomSlider(QWidget *parent, ModelParameter *parameter)
 
     ui->NameLabel->setText(QString::fromStdString(name));
     ui->ValueLabel->setText(QString::number(currentValue));
-    ui->Slider->setValue(mapDoubleToInt(currentValue));
+    ui->Slider->setMaximum((int) this->maxValue * 100);
+    ui->Slider->setMinimum((int) this->minValue * 100);
+    ui->Slider->setValue((int) this->currentValue * 100);
 
     connect(this->ui->Slider, SIGNAL(valueChanged(int)), this, SLOT(updateLabel(int)));
 }
@@ -29,9 +31,11 @@ CustomSlider::~CustomSlider()
 }
 
 void CustomSlider::updateLabel(int currentValue){
-    double currentValueDb = mapIntToDouble(currentValue);
-    ui->ValueLabel->setText(QString::number(currentValueDb));
-    this->currentValue = currentValueDb;
+    double newValue = (double) currentValue / 100;
+    ui->ValueLabel->setText(QString::number(newValue));
+    this->currentValue = newValue;
+
+    emit updateParameterValue(newValue);
 }
 
 void CustomSlider::setName(string name){
@@ -48,16 +52,4 @@ void CustomSlider::setCurrentValue(double currentValue){
 
 double CustomSlider::getCurrentValue(){
     return this->currentValue;
-}
-
-int CustomSlider::mapDoubleToInt(double currentValue){
-    double interval = maxValue - minValue;
-    double percentageEquivalence = interval / 100;
-    return round((currentValue - minValue) / percentageEquivalence);
-}
-
-double CustomSlider::mapIntToDouble(int currentValue){
-    double interval = maxValue - minValue;
-    double percentageEquivalence = interval / 100;
-    return minValue + (currentValue * percentageEquivalence);
 }

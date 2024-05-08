@@ -5,7 +5,6 @@
 #include "src/models/headers/barkanamodel.h"
 #include "src/models/headers/changrefsdalmodel.h"
 #include "src/models/headers/devancoulermodel.h"
-#include "src/models/headers/doubleplanemodel.h"
 #include "src/models/headers/elliptichubblemodel.h"
 #include "src/models/headers/elliptickingmodel.h"
 #include "src/models/headers/ellipticmodel.h"
@@ -25,6 +24,8 @@
 #include "src/models/headers/transparentspheremodel.h"
 #include "src/models/headers/truncatedkingmodel.h"
 #include "src/models/headers/uniformringmodel.h"
+
+#include <QDebug>
 
 using std::map;
 
@@ -70,7 +71,7 @@ void ModelsDialog::createCell(Model *model){
 
     connect(newCell, SIGNAL(deleteThisCell(int)), this, SLOT(deleteCell(int)));
     connect(newCell, SIGNAL(changeSimulationModel(string, int)), this, SLOT(changeSimulationModel(string, int)));
-    connect(this, SIGNAL(loadParameters(vector<ModelParameter*>)), newCell, SLOT(loadParameters(vector<ModelParameter*>)));
+    connect(this, SIGNAL(loadParameters(vector<ModelParameter*>, int)), newCell, SLOT(loadParameters(vector<ModelParameter*>, int)));
 }
 
 void ModelsDialog::deleteCell(int index){
@@ -99,17 +100,16 @@ void ModelsDialog::changeSimulationModel(string modelName, int index){
         {"Spiral Model", 10},
         {"Multipole Model", 11},
         {"Rotation Lens", 12},
-        {"Double Plane Model", 13},
-        {"Uniform Ring", 14},
-        {"Second Order", 15},
-        {"Elliptic SIS", 16},
-        {"Elliptic King", 17},
-        {"Elliptic Hubble", 18},
-        {"Elliptic NIS", 19},
-        {"Elliptic Plummer", 20},
-        {"Kassiola-Kovner", 21},
-        {"NFW", 22},
-        {"Barkana", 23},
+        {"Uniform Ring", 13},
+        {"Second Order", 14},
+        {"Elliptic SIS", 15},
+        {"Elliptic King", 16},
+        {"Elliptic Hubble", 17},
+        {"Elliptic NIS", 18},
+        {"Elliptic Plummer", 19},
+        {"Kassiola-Kovner", 20},
+        {"NFW", 21},
+        {"Barkana", 22},
     };
 
     if(simulationModels->at(index) != nullptr){
@@ -166,46 +166,42 @@ void ModelsDialog::changeSimulationModel(string modelName, int index){
             break;
 
         case 13:
-            simulationModels->at(index) = new DoublePlaneModel();
-            break;
-
-        case 14:
             simulationModels->at(index) = new UniformRingModel();
             break;
 
-        case 15:
+        case 14:
             simulationModels->at(index) = new SecondOrderModel();
             break;
 
-        case 16:
+        case 15:
             simulationModels->at(index) = new EllipticSISModel();
             break;
 
-        case 17:
+        case 16:
             simulationModels->at(index) = new EllipticKingModel();
             break;
 
-        case 18:
+        case 17:
             simulationModels->at(index) = new EllipticHubbleModel();
             break;
 
-        case 19:
+        case 18:
             simulationModels->at(index) = new EllipticNISModel();
             break;
 
-        case 20:
+        case 19:
             simulationModels->at(index) = new EllipticPlummerModel();
             break;
 
-        case 21:
+        case 20:
             simulationModels->at(index) = new KassiolaKovnerModel();
             break;
 
-        case 22:
+        case 21:
             simulationModels->at(index) = new NFWModel();
             break;
 
-        case 23:
+        case 22:
             simulationModels->at(index) = new BarkanaModel();
             break;
 
@@ -213,5 +209,5 @@ void ModelsDialog::changeSimulationModel(string modelName, int index){
             simulationModels->at(index) = nullptr;
     }
 
-    emit this->loadParameters(simulationModels->at(index)->getParameters());
+    emit this->loadParameters(simulationModels->at(index)->getParameters(), index);
 }

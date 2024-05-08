@@ -27,7 +27,7 @@ public:
         return parameters[index];
     }
 
-    void setParameters(vector<ModelParameter*> &newParameters){
+    void setParameters(vector<ModelParameter*> newParameters){
         parameters.clear();
         parameters = newParameters;
     }
@@ -37,8 +37,8 @@ public:
     }
 
     void printParameters(){
-        for(auto &parameter : parameters){
-            qDebug() << parameter->getName();
+        for(int index = 0; index < (int) this->parameters.size(); index++){
+            qDebug() << parameters[index]->getName();
         }
     }
 

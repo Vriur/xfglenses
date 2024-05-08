@@ -109,11 +109,6 @@
        </item>
        <item>
         <property name="text">
-         <string>Double Plane Model</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
          <string>Uniform Ring</string>
         </property>
        </item>

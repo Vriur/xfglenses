@@ -24,7 +24,6 @@ SOURCES += \
     src/models/sources/barkanamodel.cpp \
     src/models/sources/changrefsdalmodel.cpp \
     src/models/sources/devancoulermodel.cpp \
-    src/models/sources/doubleplanemodel.cpp \
     src/models/sources/elliptichubblemodel.cpp \
     src/models/sources/elliptickingmodel.cpp \
     src/models/sources/ellipticmodel.cpp \
@@ -61,7 +60,6 @@ HEADERS += \
     src/models/headers/barkanamodel.h \
     src/models/headers/changrefsdalmodel.h \
     src/models/headers/devancoulermodel.h \
-    src/models/headers/doubleplanemodel.h \
     src/models/headers/elliptichubblemodel.h \
     src/models/headers/elliptickingmodel.h \
     src/models/headers/ellipticmodel.h \

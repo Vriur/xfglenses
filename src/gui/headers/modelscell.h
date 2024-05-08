@@ -35,7 +35,7 @@ private slots:
 
     void on_DeleteBtn_clicked();
 
-    void loadParameters(vector<ModelParameter*> parameters);
+    void loadParameters(vector<ModelParameter*> parameters, int index);
 
 private:
     Ui::ModelsCell *ui;
