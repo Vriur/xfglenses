@@ -25,6 +25,7 @@ ModelsCell::~ModelsCell()
 
 void ModelsCell::on_ModelMenuCmBox_currentTextChanged(const QString &modelName)
 {
+    cleanScrollArea();
     emit changeSimulationModel(modelName.toStdString(), this->index);
 }
 
@@ -48,8 +49,6 @@ void ModelsCell::on_DeleteBtn_clicked()
 
 void ModelsCell::loadParameters(vector<ModelParameter*> parameters, int index){
     if(this->index == index){
-        cleanScrollArea();
-
         for(int index = 0; index < (int) parameters.size(); index++){
             CustomSlider *newCustomSlider = new CustomSlider(this, parameters.at(index));
             newCustomSlider->setAttribute(Qt::WA_DeleteOnClose);

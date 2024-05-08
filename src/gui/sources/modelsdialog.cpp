@@ -209,5 +209,7 @@ void ModelsDialog::changeSimulationModel(string modelName, int index){
             simulationModels->at(index) = nullptr;
     }
 
-    emit this->loadParameters(simulationModels->at(index)->getParameters(), index);
+    if(simulationModels->at(index) != nullptr){
+        emit this->loadParameters(simulationModels->at(index)->getParameters(), index);
+    }
 }
