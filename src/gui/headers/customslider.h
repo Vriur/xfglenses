@@ -23,6 +23,10 @@ public:
     string getName();
     void setCurrentValue(double currentValue);
     double getCurrentValue();
+    void setMinValue(double minValue);
+    double getMinValue();
+    void setMaxValue(double maxValue);
+    double getMaxValue();
 
 signals:
     void updateParameterValue(double value);
@@ -35,7 +39,6 @@ private:
     string name;
     double maxValue;
     double minValue;
-    double initialValue;
     double currentValue;
 };
 

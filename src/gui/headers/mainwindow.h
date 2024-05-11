@@ -7,7 +7,6 @@
 #include "src/gui/headers/causticdialog.h"
 #include "src/gui/headers/fittingdialog.h"
 #include "src/gui/headers/helpdialog.h"
-#include "src/gui/headers/imagefiledialog.h"
 #include "src/gui/headers/lightcurvedialog.h"
 #include "src/gui/headers/modelsdialog.h"
 #include "src/gui/headers/obipdialog.h"
@@ -55,7 +54,6 @@ private:
     CausticDialog *causticDialog;
     FittingDialog *fittingDialog;
     HelpDialog *helpDialog;
-    ImageFileDialog *imageFileDialog;
     LightCurveDialog *lightCurveDialog;
     ModelsDialog *modelsDialog;
     OBIPDialog *obipDialog;

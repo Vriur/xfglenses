@@ -14,7 +14,6 @@ SOURCES += \
     src/gui/sources/customslider.cpp \
     src/gui/sources/fittingdialog.cpp \
     src/gui/sources/helpdialog.cpp \
-    src/gui/sources/imagefiledialog.cpp \
     src/gui/sources/lightcurvedialog.cpp \
     src/gui/sources/mainwindow.cpp \
     src/gui/sources/modelscell.cpp \
@@ -50,7 +49,6 @@ HEADERS += \
     src/gui/headers/customslider.h \
     src/gui/headers/fittingdialog.h \
     src/gui/headers/helpdialog.h \
-    src/gui/headers/imagefiledialog.h \
     src/gui/headers/lightcurvedialog.h \
     src/gui/headers/mainwindow.h \
     src/gui/headers/modelscell.h \
@@ -87,7 +85,6 @@ FORMS += \
     src/gui/forms/customslider.ui \
     src/gui/forms/fittingdialog.ui \
     src/gui/forms/helpdialog.ui \
-    src/gui/forms/imagefiledialog.ui \
     src/gui/forms/lightcurvedialog.ui \
     src/gui/forms/mainwindow.ui \
     src/gui/forms/modelscell.ui \

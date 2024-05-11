@@ -10,17 +10,12 @@ CustomSlider::CustomSlider(QWidget *parent, ModelParameter *parameter)
 {
     ui->setupUi(this);
 
-    this->name = parameter->getName();
-    this->currentValue = parameter->getCurrentValue();
-    this->initialValue = parameter->getCurrentValue();
-    this->maxValue = parameter->getMaxValue();
-    this->minValue = parameter->getMinValue();
-
-    ui->NameLabel->setText(QString::fromStdString(name));
-    ui->ValueLabel->setText(QString::number(currentValue));
-    ui->Slider->setMaximum((int) this->maxValue * 100);
-    ui->Slider->setMinimum((int) this->minValue * 100);
-    ui->Slider->setValue((int) this->currentValue * 100);
+    if(parameter != nullptr){
+        this->setName(parameter->getName());
+        this->setMinValue(parameter->getMinValue());
+        this->setMaxValue(parameter->getMaxValue());
+        this->setCurrentValue(parameter->getCurrentValue());
+    }
 
     connect(this->ui->Slider, SIGNAL(valueChanged(int)), this, SLOT(updateLabel(int)));
 }
@@ -40,6 +35,7 @@ void CustomSlider::updateLabel(int currentValue){
 
 void CustomSlider::setName(string name){
     this->name = name;
+    ui->NameLabel->setText(QString::fromStdString(name));
 }
 
 string CustomSlider::getName(){
@@ -48,8 +44,28 @@ string CustomSlider::getName(){
 
 void CustomSlider::setCurrentValue(double currentValue){
     this->currentValue = currentValue;
+    ui->ValueLabel->setText(QString::number(currentValue));
+    ui->Slider->setValue((int) currentValue * 100);
 }
 
 double CustomSlider::getCurrentValue(){
     return this->currentValue;
+}
+
+void CustomSlider::setMinValue(double minValue){
+    this->minValue = minValue;
+    ui->Slider->setMinimum((int) minValue * 100);
+}
+
+double CustomSlider::getMinValue(){
+    return this->minValue;
+}
+
+void CustomSlider::setMaxValue(double maxValue){
+    this->maxValue = maxValue;
+    ui->Slider->setMaximum((int) maxValue * 100);
+}
+
+double CustomSlider::getMaxValue(){
+    return this->maxValue;
 }
