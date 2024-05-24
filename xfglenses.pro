@@ -20,6 +20,7 @@ SOURCES += \
     src/gui/sources/modelsdialog.cpp \
     src/gui/sources/obipdialog.cpp \
     src/gui/sources/trackdialog.cpp \
+    src/logic/sources/simulationparameters.cpp \
     src/models/sources/barkanamodel.cpp \
     src/models/sources/changrefsdalmodel.cpp \
     src/models/sources/devancoulermodel.cpp \
@@ -55,6 +56,7 @@ HEADERS += \
     src/gui/headers/modelsdialog.h \
     src/gui/headers/obipdialog.h \
     src/gui/headers/trackdialog.h \
+    src/logic/headers/simulationparameters.h \
     src/models/headers/barkanamodel.h \
     src/models/headers/changrefsdalmodel.h \
     src/models/headers/devancoulermodel.h \

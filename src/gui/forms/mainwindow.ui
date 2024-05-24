@@ -62,14 +62,7 @@
         </property>
        </spacer>
       </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;GL Control Panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0" colspan="2">
+      <item row="1" column="0" colspan="2">
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -187,10 +180,10 @@
                  <bool>true</bool>
                 </property>
                 <property name="minimum">
-                 <double>-999.000000000000000</double>
+                 <double>-4.000000000000000</double>
                 </property>
                 <property name="maximum">
-                 <double>999.000000000000000</double>
+                 <double>4.000000000000000</double>
                 </property>
                 <property name="singleStep">
                  <double>0.010000000000000</double>
@@ -214,10 +207,10 @@
                  <bool>true</bool>
                 </property>
                 <property name="minimum">
-                 <double>-999.000000000000000</double>
+                 <double>-4.000000000000000</double>
                 </property>
                 <property name="maximum">
-                 <double>999.000000000000000</double>
+                 <double>4.000000000000000</double>
                 </property>
                 <property name="singleStep">
                  <double>0.010000000000000</double>

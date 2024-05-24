@@ -7,22 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>575</width>
-    <height>418</height>
+    <height>419</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Help Dialog</string>
+   <string>Visualization of Gravitational Lenses</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="Title">
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Visualization of Gravitational Lenses&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
      <item>
       <widget class="QTextEdit" name="Help">
        <property name="minimumSize">

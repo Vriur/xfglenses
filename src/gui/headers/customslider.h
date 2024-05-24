@@ -34,6 +34,8 @@ signals:
 private slots:
     void updateLabel(int currentValue);
 
+    void on_Slider_valueChanged(int value);
+
 private:
     Ui::CustomSlider *ui;
     string name;

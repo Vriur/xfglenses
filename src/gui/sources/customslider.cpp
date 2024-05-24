@@ -1,6 +1,8 @@
 #include "src/gui/headers/customslider.h"
 #include "ui_customslider.h"
 
+#include <QDebug>
+
 using std::string;
 using std::round;
 
@@ -45,7 +47,7 @@ string CustomSlider::getName(){
 void CustomSlider::setCurrentValue(double currentValue){
     this->currentValue = currentValue;
     ui->ValueLabel->setText(QString::number(currentValue));
-    ui->Slider->setValue((int) currentValue * 100);
+    ui->Slider->setValue((int) (currentValue * 100));
 }
 
 double CustomSlider::getCurrentValue(){
@@ -69,3 +71,9 @@ void CustomSlider::setMaxValue(double maxValue){
 double CustomSlider::getMaxValue(){
     return this->maxValue;
 }
+
+void CustomSlider::on_Slider_valueChanged(int value)
+{
+    emit this->updateParameterValue((double) value / 100);
+}
+

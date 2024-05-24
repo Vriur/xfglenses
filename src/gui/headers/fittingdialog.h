@@ -15,6 +15,9 @@ public:
     explicit FittingDialog(QWidget *parent = nullptr);
     ~FittingDialog();
 
+private slots:
+    void on_DoneBtn_clicked();
+
 private:
     Ui::FittingDialog *ui;
 };

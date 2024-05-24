@@ -22,3 +22,9 @@ FittingDialog::~FittingDialog()
 {
     delete ui;
 }
+
+void FittingDialog::on_DoneBtn_clicked()
+{
+    this->close();
+}
+

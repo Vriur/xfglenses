@@ -12,3 +12,9 @@ HelpDialog::~HelpDialog()
 {
     delete ui;
 }
+
+void HelpDialog::on_DoneBtn_clicked()
+{
+    this->close();
+}
+

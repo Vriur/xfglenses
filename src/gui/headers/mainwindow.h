@@ -12,6 +12,8 @@
 #include "src/gui/headers/obipdialog.h"
 #include "src/gui/headers/trackdialog.h"
 
+#include "src/logic/headers/simulationparameters.h"
+
 using std::vector;
 
 QT_BEGIN_NAMESPACE
@@ -28,6 +30,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    SimulationParameters simulationParameters;
     vector<Model*> simulationModels;
 
 private slots:
@@ -48,6 +51,34 @@ private slots:
     void on_TrackBtn_clicked();
 
     void on_PrintBtn_clicked();
+
+    void on_SourceChkBtn_stateChanged(int arg1);
+
+    void on_ImagesChkBtn_stateChanged(int arg1);
+
+    void on_SmoothChkBtn_stateChanged(int arg1);
+
+    void on_GridChkBtn_stateChanged(int arg1);
+
+    void on_RayPlotChkBtn_stateChanged(int arg1);
+
+    void on_RootsChkBtn_stateChanged(int arg1);
+
+    void on_R_EChkBtn_stateChanged(int arg1);
+
+    void on_ContourChkBtn_stateChanged(int arg1);
+
+    void on_InversionChkBtn_stateChanged(int arg1);
+
+    void on_TimeDelayChkBtn_stateChanged(int arg1);
+
+    void on_XSpBox_valueChanged(double arg1);
+
+    void on_YSpBox_valueChanged(double arg1);
+
+    void on_NSpBox_valueChanged(int arg1);
+
+    void on_SourceMenuCmBox_currentTextChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;
