@@ -14,16 +14,12 @@ namespace Ui {
 class ModelsDialog;
 }
 
-namespace{
-    auto defaultEmptyVector = vector<Model*>();
-}
-
 class ModelsDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit ModelsDialog(QWidget *parent = nullptr, vector<Model*> &simulationModels = defaultEmptyVector);
+    explicit ModelsDialog(QWidget *parent, vector<Model*> &simulationModels);
     ~ModelsDialog();
     void createCell(Model *model = nullptr);
 

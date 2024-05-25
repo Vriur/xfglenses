@@ -39,7 +39,6 @@ SimulationParameters::~SimulationParameters(){
 }
 
 void SimulationParameters::setCausticDX(double causticDX){
-    qDebug() << causticDX;
     this->causticDX = causticDX;
 }
 
@@ -48,7 +47,6 @@ double SimulationParameters::getCausticDX(){
 }
 
 void SimulationParameters::setCausticTOL(double causticTOL){
-    qDebug() << causticTOL;
     this->causticTOL = causticTOL;
 }
 
@@ -57,7 +55,7 @@ double SimulationParameters::getCausticTOL(){
 }
 
 void SimulationParameters::setSourceN(int sourceN){
-    qDebug() << sourceN;
+    qDebug() << "N: " << sourceN;
     this->sourceN = sourceN;
 }
 
@@ -83,43 +81,38 @@ string SimulationParameters::getImageFilePath(){
     return this->imageFilePath;
 }
 
-void SimulationParameters::setSourcePositionX(double valueX){
-    qDebug() << valueX;
-    this->sourcePosition.first = valueX;
+void SimulationParameters::setSourcePositionX(double x){
+    qDebug() << "X: " << x;
+    this->sourcePosition.first = x;
 }
 
-void SimulationParameters::setSourcePositionY(double valueY){
-    qDebug() << valueY;
-    this->sourcePosition.second = valueY;
+void SimulationParameters::setSourcePositionY(double y){
+    qDebug() << "Y: " << y;
+    this->sourcePosition.second = y;
 }
 
 pair<double, double> SimulationParameters::getSourcePosition(){
     return this->sourcePosition;
 }
 
-void SimulationParameters::setAnimationSourceInitialPositionX(double valueX){
-    qDebug() << "IX: " << valueX;
-    this->animationSourceInitialPosition.first = valueX;
+void SimulationParameters::setAnimationSourceInitialPositionX(double x){
+    this->animationSourceInitialPosition.first = x;
 }
 
-void SimulationParameters::setAnimationSourceInitialPositionY(double valueY){
-    qDebug() << "IY: " << valueY;
-    this->animationSourceInitialPosition.second = valueY;
+void SimulationParameters::setAnimationSourceInitialPositionY(double y){
+    this->animationSourceInitialPosition.second = y;
 }
 
 pair<double, double> SimulationParameters::getAnimationSourceInitialPosition(){
-    qDebug() << this->animationSourceInitialPosition.first << " " << this->animationSourceInitialPosition.second;
     return this->animationSourceInitialPosition;
 }
 
-void SimulationParameters::setAnimationSourceFinalPositionX(double valueX){
-    qDebug() << "FX: " << valueX;
-    this->animationSourceFinalPosition.first = valueX;
+void SimulationParameters::setAnimationSourceFinalPositionX(double x){
+    this->animationSourceFinalPosition.first = x;
 }
 
-void SimulationParameters::setAnimationSourceFinalPositionY(double valueY){
-    qDebug() << "FY: " << valueY;
-    this->animationSourceFinalPosition.second = valueY;
+void SimulationParameters::setAnimationSourceFinalPositionY(double y){
+    this->animationSourceFinalPosition.second = y;
 }
 
 pair<double, double> SimulationParameters::getAnimationSourceFinalPosition(){
@@ -127,10 +120,43 @@ pair<double, double> SimulationParameters::getAnimationSourceFinalPosition(){
 }
 
 void SimulationParameters::setShowInGraph(string key, bool value){
-    qDebug() << value;
+    qDebug() << key << " " << value;
     this->showInGraph[key] = value;
 }
 
 bool SimulationParameters::getShowInGraph(string key){
     return this->showInGraph[key];
+}
+
+void SimulationParameters::createImage(double x, double y){
+    pair<double, double> *newImage = new pair(x, y);
+    this->images.push_back(newImage);
+}
+
+void SimulationParameters::editImageX(double x, int index){
+    this->images[index]->first = x;
+}
+
+void SimulationParameters::editImageY(double y, int index){
+    this->images[index]->second = y;
+}
+
+void SimulationParameters::deleteImage(int index){
+    this->images.erase(std::next(images.begin(), index));
+}
+
+void SimulationParameters::clearImages(){
+    this->images.clear();
+}
+
+pair<double, double>* SimulationParameters::getImage(int index){
+    return this->images[index];
+}
+
+vector<pair<double, double>*> SimulationParameters::getImages(){
+    return this->images;
+}
+
+int SimulationParameters::getImagesLength(){
+    return this->images.size();
 }

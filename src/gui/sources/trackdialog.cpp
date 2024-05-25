@@ -1,8 +1,6 @@
 #include "src/gui/headers/trackdialog.h"
 #include "ui_trackdialog.h"
 
-#include <QDebug>
-
 TrackDialog::TrackDialog(QWidget *parent, SimulationParameters &simulationParameters)
     : QDialog(parent)
     , ui(new Ui::TrackDialog)

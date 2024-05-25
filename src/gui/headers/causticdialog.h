@@ -21,7 +21,8 @@ public:
     ~CausticDialog();
 
 signals:
-    void updateDoubleValue(double value);
+    void updateDXValue(double value);
+    void updateTOLValue(double value);
     void updateBoolValue(string key, bool value);
 
 private slots:

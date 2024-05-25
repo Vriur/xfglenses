@@ -13,8 +13,8 @@ CausticDialog::CausticDialog(QWidget *parent, SimulationParameters &simulationPa
     this->ui->CriticalCurvesChkBox->setChecked(simulationParameters.getShowInGraph("CriticalCurves"));
     this->ui->CausticsChkBox->setChecked(simulationParameters.getShowInGraph("Caustics"));
 
-    connect(this, SIGNAL(updateDoubleValue(double)), &simulationParameters, SLOT(setCausticDX(double)));
-    connect(this, SIGNAL(updateDoubleValue(double)), &simulationParameters, SLOT(setCausticTOL(double)));
+    connect(this, SIGNAL(updateDXValue(double)), &simulationParameters, SLOT(setCausticDX(double)));
+    connect(this, SIGNAL(updateTOLValue(double)), &simulationParameters, SLOT(setCausticTOL(double)));
     connect(this, SIGNAL(updateBoolValue(string, bool)), &simulationParameters, SLOT(setShowInGraph(string,bool)));
     connect(this, SIGNAL(updateBoolValue(string, bool)), &simulationParameters, SLOT(setShowInGraph(string,bool)));
 }
@@ -32,13 +32,13 @@ void CausticDialog::on_DoneBtn_clicked()
 
 void CausticDialog::on_DXSpnBox_valueChanged(double arg1)
 {
-    emit this->updateDoubleValue(arg1);
+    emit this->updateDXValue(arg1);
 }
 
 
 void CausticDialog::on_TOLSpnBox_valueChanged(double arg1)
 {
-    emit this->updateDoubleValue(arg1);
+    emit this->updateTOLValue(arg1);
 }
 
 

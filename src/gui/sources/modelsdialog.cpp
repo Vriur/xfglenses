@@ -25,8 +25,6 @@
 #include "src/models/headers/truncatedkingmodel.h"
 #include "src/models/headers/uniformringmodel.h"
 
-#include <QDebug>
-
 using std::map;
 
 ModelsDialog::ModelsDialog(QWidget *parent, vector<Model*> &simulationModels)

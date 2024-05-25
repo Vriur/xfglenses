@@ -18,6 +18,7 @@ SOURCES += \
     src/gui/sources/mainwindow.cpp \
     src/gui/sources/modelscell.cpp \
     src/gui/sources/modelsdialog.cpp \
+    src/gui/sources/obipcell.cpp \
     src/gui/sources/obipdialog.cpp \
     src/gui/sources/trackdialog.cpp \
     src/logic/sources/simulationparameters.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     src/gui/headers/mainwindow.h \
     src/gui/headers/modelscell.h \
     src/gui/headers/modelsdialog.h \
+    src/gui/headers/obipcell.h \
     src/gui/headers/obipdialog.h \
     src/gui/headers/trackdialog.h \
     src/logic/headers/simulationparameters.h \
@@ -91,6 +93,7 @@ FORMS += \
     src/gui/forms/mainwindow.ui \
     src/gui/forms/modelscell.ui \
     src/gui/forms/modelsdialog.ui \
+    src/gui/forms/obipcell.ui \
     src/gui/forms/obipdialog.ui \
     src/gui/forms/trackdialog.ui
 

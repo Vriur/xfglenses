@@ -3,8 +3,6 @@
 
 #include "modelparameter.h"
 
-#include <QDebug>
-
 using std::string;
 using std::vector;
 
@@ -34,12 +32,6 @@ public:
 
     vector<ModelParameter *> getParameters(){
         return parameters;
-    }
-
-    void printParameters(){
-        for(int index = 0; index < (int) this->parameters.size(); index++){
-            qDebug() << parameters[index]->getName();
-        }
     }
 
 protected:

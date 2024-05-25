@@ -70,7 +70,7 @@ void MainWindow::on_ModelsBtn_clicked()
 
 void MainWindow::on_OBIPBtn_clicked()
 {
-    this->obipDialog = new OBIPDialog(this);
+    this->obipDialog = new OBIPDialog(this, this->simulationParameters);
     this->obipDialog->show();
 }
 
