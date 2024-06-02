@@ -16,13 +16,11 @@ MainWindow::MainWindow(QWidget *parent)
     this->ui->RayPlotChkBtn->setChecked(this->simulationParameters.getShowInGraph("RayPlot"));
     this->ui->RootsChkBtn->setChecked(this->simulationParameters.getShowInGraph("Roots"));
     this->ui->R_EChkBtn->setChecked(this->simulationParameters.getShowInGraph("R_E"));
-    this->ui->SmoothChkBtn->setChecked(this->simulationParameters.getShowInGraph("Smooth"));
     this->ui->SourceChkBtn->setChecked(this->simulationParameters.getShowInGraph("Source"));
     this->ui->TimeDelayChkBtn->setChecked(this->simulationParameters.getShowInGraph("TimeDelay"));
 
     this->ui->XSpBox->setValue(this->simulationParameters.getSourcePosition().first);
     this->ui->YSpBox->setValue(this->simulationParameters.getSourcePosition().second);
-    this->ui->NSpBox->setValue(this->simulationParameters.getSourceN());
 
     this->ui->SourceMenuCmBox->setCurrentText(QString::fromStdString(this->simulationParameters.getSourceType()));
 
@@ -90,60 +88,45 @@ void MainWindow::on_PrintBtn_clicked()
     // El botón print guarda en data sin preguntar, es decir, no hay vista previa.
 }
 
-
 void MainWindow::on_SourceChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("Source", (bool) arg1);
 }
-
 
 void MainWindow::on_ImagesChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("Images", (bool) arg1);
 }
 
-
-void MainWindow::on_SmoothChkBtn_stateChanged(int arg1)
-{
-    this->simulationParameters.setShowInGraph("Smooth", (bool) arg1);
-}
-
-
 void MainWindow::on_GridChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("Grid", (bool) arg1);
 }
-
 
 void MainWindow::on_RayPlotChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("RayPlot", (bool) arg1);
 }
 
-
 void MainWindow::on_RootsChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("Roots", (bool) arg1);
 }
-
 
 void MainWindow::on_R_EChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("R_E", (bool) arg1);
 }
 
-
 void MainWindow::on_ContourChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("Contour", (bool) arg1);
 }
 
-
 void MainWindow::on_InversionChkBtn_stateChanged(int arg1)
 {
     this->simulationParameters.setShowInGraph("Inversion", (bool) arg1);
 }
-
 
 void MainWindow::on_TimeDelayChkBtn_stateChanged(int arg1)
 {
@@ -156,16 +139,10 @@ void MainWindow::on_XSpBox_valueChanged(double arg1)
     this->ui->sourceGraph->updateSourceXCoordinate(arg1);
 }
 
-
 void MainWindow::on_YSpBox_valueChanged(double arg1)
 {
     this->simulationParameters.setSourcePositionY(arg1);
     this->ui->sourceGraph->updateSourceYCoordinate(arg1);
-}
-
-void MainWindow::on_NSpBox_valueChanged(int arg1)
-{
-    this->simulationParameters.setSourceN(arg1);
 }
 
 void MainWindow::on_SourceMenuCmBox_currentTextChanged(const QString &arg1)

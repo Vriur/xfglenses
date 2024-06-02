@@ -19,8 +19,6 @@ public:
     ~SimulationParameters();
     double getCausticDX();
     double getCausticTOL();
-    void setSourceN(int sourceN);
-    int getSourceN();
     void setSourceType(string sourceType);
     string getSourceType();
     void setImageFilePath(string imageFilePath);
@@ -52,7 +50,6 @@ public slots:
 private:
     double causticDX;
     double causticTOL;
-    int sourceN;
     string sourceType;
     string imageFilePath;
     pair<double, double> sourcePosition;

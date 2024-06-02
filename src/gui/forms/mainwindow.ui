@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1160</width>
+    <width>1183</width>
     <height>532</height>
    </rect>
   </property>
@@ -226,28 +226,7 @@
              </layout>
             </item>
             <item row="3" column="0">
-             <layout class="QHBoxLayout" name="horizontalLayout_3">
-              <item>
-               <widget class="QLabel" name="label_3">
-                <property name="text">
-                 <string>N</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSpinBox" name="NSpBox">
-                <property name="accelerated">
-                 <bool>true</bool>
-                </property>
-                <property name="minimum">
-                 <number>1</number>
-                </property>
-                <property name="maximum">
-                 <number>10</number>
-                </property>
-               </widget>
-              </item>
-             </layout>
+             <layout class="QHBoxLayout" name="horizontalLayout_3"/>
             </item>
             <item row="4" column="0">
              <widget class="QPushButton" name="SimulationBtn">
@@ -328,8 +307,68 @@
             <property name="verticalSpacing">
              <number>6</number>
             </property>
-            <item row="3" column="2">
-             <widget class="QPushButton" name="FittingBtn">
+            <item row="3" column="0" alignment="Qt::AlignHCenter">
+             <widget class="QPushButton" name="ImageFileBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Image File</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QCheckBox" name="RayPlotChkBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ray plot</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="2">
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="4" column="0" alignment="Qt::AlignHCenter">
+             <widget class="QPushButton" name="OBIPBtn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -349,96 +388,7 @@
                </size>
               </property>
               <property name="text">
-               <string>Fitting</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QCheckBox" name="GridChkBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Grid</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QCheckBox" name="ImagesChkBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Images</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="3">
-             <widget class="QCheckBox" name="TimeDelayChkBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Time Delay</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="2">
-             <spacer name="verticalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="3" column="3">
-             <widget class="QCheckBox" name="InversionChkBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Inversion</string>
+               <string>OBIP</string>
               </property>
              </widget>
             </item>
@@ -461,8 +411,21 @@
               </property>
              </widget>
             </item>
-            <item row="4" column="2">
-             <widget class="QCheckBox" name="R_EChkBtn">
+            <item row="0" column="2">
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="5" column="2">
+             <widget class="QCheckBox" name="InversionChkBtn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -476,12 +439,12 @@
                </size>
               </property>
               <property name="text">
-               <string>R_E</string>
+               <string>Inversion</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
-             <widget class="QCheckBox" name="SmoothChkBtn">
+            <item row="2" column="2">
+             <widget class="QCheckBox" name="RootsChkBtn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -495,76 +458,7 @@
                </size>
               </property>
               <property name="text">
-               <string>Smooth</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="3">
-             <widget class="QPushButton" name="HelpBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Help</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="0" alignment="Qt::AlignHCenter">
-             <widget class="QPushButton" name="TrackBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Track</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="1">
-             <widget class="QCheckBox" name="RayPlotChkBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Ray plot</string>
+               <string>Roots</string>
               </property>
              </widget>
             </item>
@@ -623,8 +517,8 @@ background-color: rgb(255, 255, 255);</string>
               </item>
              </widget>
             </item>
-            <item row="3" column="0" alignment="Qt::AlignHCenter">
-             <widget class="QPushButton" name="ImageFileBtn">
+            <item row="5" column="0" alignment="Qt::AlignHCenter">
+             <widget class="QPushButton" name="TrackBtn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -643,16 +537,13 @@ background-color: rgb(255, 255, 255);</string>
                 <height>25</height>
                </size>
               </property>
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
               <property name="text">
-               <string>Image File</string>
+               <string>Track</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="2">
-             <widget class="QCheckBox" name="RootsChkBtn">
+            <item row="3" column="1">
+             <widget class="QCheckBox" name="TimeDelayChkBtn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -666,14 +557,14 @@ background-color: rgb(255, 255, 255);</string>
                </size>
               </property>
               <property name="text">
-               <string>Roots</string>
+               <string>Time Delay</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="0" alignment="Qt::AlignHCenter">
-             <widget class="QPushButton" name="OBIPBtn">
+            <item row="4" column="1">
+             <widget class="QCheckBox" name="GridChkBtn">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -684,84 +575,8 @@ background-color: rgb(255, 255, 255);</string>
                 <height>25</height>
                </size>
               </property>
-              <property name="maximumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
               <property name="text">
-               <string>OBIP</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="3">
-             <widget class="QPushButton" name="LightCurveBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Light Curve</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="2">
-             <widget class="QPushButton" name="CausticBtn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>105</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>CC / Caustic</string>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="2">
-             <spacer name="verticalSpacer_4">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="5" column="2">
-             <widget class="QCheckBox" name="ContourChkBtn">
-              <property name="text">
-               <string>Contour</string>
+               <string>Grid</string>
               </property>
              </widget>
             </item>
@@ -790,7 +605,102 @@ background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="3">
+            <item row="3" column="2">
+             <widget class="QCheckBox" name="ContourChkBtn">
+              <property name="text">
+               <string>Contour</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QCheckBox" name="R_EChkBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>R_E</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="CausticBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>CC / Caustic</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QCheckBox" name="ImagesChkBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Images</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QPushButton" name="FittingBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fitting</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
              <widget class="QPushButton" name="PrintBtn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -812,6 +722,56 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
                <string>Print</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QPushButton" name="LightCurveBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Light Curve</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QPushButton" name="HelpBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>105</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Help</string>
               </property>
              </widget>
             </item>

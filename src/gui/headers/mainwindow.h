@@ -57,8 +57,6 @@ private slots:
 
     void on_ImagesChkBtn_stateChanged(int arg1);
 
-    void on_SmoothChkBtn_stateChanged(int arg1);
-
     void on_GridChkBtn_stateChanged(int arg1);
 
     void on_RayPlotChkBtn_stateChanged(int arg1);
@@ -76,8 +74,6 @@ private slots:
     void on_XSpBox_valueChanged(double arg1);
 
     void on_YSpBox_valueChanged(double arg1);
-
-    void on_NSpBox_valueChanged(int arg1);
 
     void on_SourceMenuCmBox_currentTextChanged(const QString &arg1);
 

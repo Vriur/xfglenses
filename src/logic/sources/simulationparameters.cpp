@@ -12,7 +12,6 @@ SimulationParameters::SimulationParameters() {
     showInGraph["RayPlot"] = false;
     showInGraph["Roots"] = false;
     showInGraph["R_E"] = false;
-    showInGraph["Smooth"] = false;
     showInGraph["Source"] = false;
     showInGraph["TimeDelay"] = false;
 
@@ -29,7 +28,6 @@ SimulationParameters::SimulationParameters() {
     causticDX = 0.01;
     causticTOL = 0.1;
 
-    sourceN = 4;
     sourceType = "Source Menu";
     imageFilePath = "";
 }
@@ -54,15 +52,6 @@ double SimulationParameters::getCausticTOL(){
     return this->causticTOL;
 }
 
-void SimulationParameters::setSourceN(int sourceN){
-    qDebug() << "N: " << sourceN;
-    this->sourceN = sourceN;
-}
-
-int SimulationParameters::getSourceN(){
-    return this->sourceN;
-}
-
 void SimulationParameters::setSourceType(string sourceType){
     qDebug() << sourceType;
     this->sourceType = sourceType;
@@ -82,12 +71,10 @@ string SimulationParameters::getImageFilePath(){
 }
 
 void SimulationParameters::setSourcePositionX(double x){
-    //qDebug() << "X: " << x;
     this->sourcePosition.first = x;
 }
 
 void SimulationParameters::setSourcePositionY(double y){
-    //qDebug() << "Y: " << y;
     this->sourcePosition.second = y;
 }
 
