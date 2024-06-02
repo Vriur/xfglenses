@@ -20,6 +20,8 @@ SOURCES += \
     src/gui/sources/modelsdialog.cpp \
     src/gui/sources/obipcell.cpp \
     src/gui/sources/obipdialog.cpp \
+    src/gui/sources/sourcegraph.cpp \
+    src/gui/sources/sourcegraphpoint.cpp \
     src/gui/sources/trackdialog.cpp \
     src/logic/sources/simulationparameters.cpp \
     src/models/sources/barkanamodel.cpp \
@@ -57,6 +59,8 @@ HEADERS += \
     src/gui/headers/modelsdialog.h \
     src/gui/headers/obipcell.h \
     src/gui/headers/obipdialog.h \
+    src/gui/headers/sourcegraph.h \
+    src/gui/headers/sourcegraphpoint.h \
     src/gui/headers/trackdialog.h \
     src/logic/headers/simulationparameters.h \
     src/models/headers/barkanamodel.h \
@@ -95,6 +99,7 @@ FORMS += \
     src/gui/forms/modelsdialog.ui \
     src/gui/forms/obipcell.ui \
     src/gui/forms/obipdialog.ui \
+    src/gui/forms/sourcegraph.ui \
     src/gui/forms/trackdialog.ui
 
 # Default rules for deployment.

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimeLine>
 
 #include "src/models/headers/model.h"
 #include "src/gui/headers/causticdialog.h"
@@ -79,6 +80,10 @@ private slots:
     void on_NSpBox_valueChanged(int arg1);
 
     void on_SourceMenuCmBox_currentTextChanged(const QString &arg1);
+
+    void updateSourceCoordinates(double x, double y);
+
+    void startAnimation(QTimeLine *timer, double initialX, double initialY, double finalX, double finalY);
 
 private:
     Ui::MainWindow *ui;

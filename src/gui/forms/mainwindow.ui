@@ -102,17 +102,23 @@
            </widget>
           </item>
           <item>
-           <widget class="QGraphicsView" name="graphicsView">
+           <widget class="SourceGraph" name="sourceGraph" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
-              <width>350</width>
-              <height>350</height>
+              <width>415</width>
+              <height>415</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>350</width>
-              <height>350</height>
+              <width>415</width>
+              <height>415</height>
              </size>
             </property>
            </widget>
@@ -833,6 +839,14 @@ background-color: rgb(255, 255, 255);</string>
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SourceGraph</class>
+   <extends>QWidget</extends>
+   <header location="global">src/gui/headers/sourcegraph.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

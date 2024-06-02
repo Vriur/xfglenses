@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->ui->NSpBox->setValue(this->simulationParameters.getSourceN());
 
     this->ui->SourceMenuCmBox->setCurrentText(QString::fromStdString(this->simulationParameters.getSourceType()));
+
+    connect(this->ui->sourceGraph, SIGNAL(updateSourceCoordinates(double, double)), this, SLOT(updateSourceCoordinates(double, double)));
 }
 
 MainWindow::~MainWindow()
@@ -77,6 +79,9 @@ void MainWindow::on_OBIPBtn_clicked()
 void MainWindow::on_TrackBtn_clicked()
 {
     this->trackDialog = new TrackDialog(this, this->simulationParameters);
+
+    connect(this->trackDialog, SIGNAL(startAnimation(QTimeLine *, double, double, double, double)), this, SLOT(startAnimation(QTimeLine *, double, double, double, double)));
+
     this->trackDialog->show();
 }
 
@@ -148,23 +153,31 @@ void MainWindow::on_TimeDelayChkBtn_stateChanged(int arg1)
 void MainWindow::on_XSpBox_valueChanged(double arg1)
 {
     this->simulationParameters.setSourcePositionX(arg1);
+    this->ui->sourceGraph->updateSourceXCoordinate(arg1);
 }
 
 
 void MainWindow::on_YSpBox_valueChanged(double arg1)
 {
     this->simulationParameters.setSourcePositionY(arg1);
+    this->ui->sourceGraph->updateSourceYCoordinate(arg1);
 }
-
 
 void MainWindow::on_NSpBox_valueChanged(int arg1)
 {
     this->simulationParameters.setSourceN(arg1);
 }
 
-
 void MainWindow::on_SourceMenuCmBox_currentTextChanged(const QString &arg1)
 {
     this->simulationParameters.setSourceType(arg1.toStdString());
 }
 
+void MainWindow::startAnimation(QTimeLine *timer, double initialX, double initialY, double finalX, double finalY){
+    this->ui->sourceGraph->trackAnimation(timer, initialX, initialY, finalX, finalY);
+}
+
+void MainWindow::updateSourceCoordinates(double x, double y){
+    this->ui->XSpBox->setValue(x);
+    this->ui->YSpBox->setValue(y);
+}

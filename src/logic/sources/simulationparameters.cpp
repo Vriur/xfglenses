@@ -82,12 +82,12 @@ string SimulationParameters::getImageFilePath(){
 }
 
 void SimulationParameters::setSourcePositionX(double x){
-    qDebug() << "X: " << x;
+    //qDebug() << "X: " << x;
     this->sourcePosition.first = x;
 }
 
 void SimulationParameters::setSourcePositionY(double y){
-    qDebug() << "Y: " << y;
+    //qDebug() << "Y: " << y;
     this->sourcePosition.second = y;
 }
 

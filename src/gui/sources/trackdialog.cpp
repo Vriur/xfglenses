@@ -44,3 +44,25 @@ void TrackDialog::on_DoneBtn_clicked()
     this->close();
 }
 
+void TrackDialog::on_AnimateBtn_clicked()
+{
+    this->ui->AnimateBtn->setDisabled(true);
+    this->ui->AnimateBtn->setEnabled(false);
+
+    QTimeLine *timer = new QTimeLine(5000);
+    timer->setFrameRange(0, 100);
+
+    double initialX = this->ui->InitialX->getCurrentValue();
+    double initialY = this->ui->InitialY->getCurrentValue();
+    double finalX = this->ui->FinalX->getCurrentValue();
+    double finalY = this->ui->FinalY->getCurrentValue();
+
+    emit startAnimation(timer, initialX, initialY, finalX, finalY);
+
+    connect(timer, SIGNAL(finished()), this, SLOT(endTrackAnimation()));
+}
+
+void TrackDialog::endTrackAnimation(){
+    this->ui->AnimateBtn->setDisabled(false);
+    this->ui->AnimateBtn->setEnabled(true);
+}
