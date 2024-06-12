@@ -1,6 +1,6 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++17
 
@@ -20,6 +20,7 @@ SOURCES += \
     src/gui/sources/modelsdialog.cpp \
     src/gui/sources/obipcell.cpp \
     src/gui/sources/obipdialog.cpp \
+    src/gui/sources/simulationdialog.cpp \
     src/gui/sources/sourcegraph.cpp \
     src/gui/sources/sourcegraphpoint.cpp \
     src/gui/sources/trackdialog.cpp \
@@ -46,7 +47,8 @@ SOURCES += \
     src/models/sources/spiralmodel.cpp \
     src/models/sources/transparentspheremodel.cpp \
     src/models/sources/truncatedkingmodel.cpp \
-    src/models/sources/uniformringmodel.cpp
+    src/models/sources/uniformringmodel.cpp \
+    src/libraries/qcustomplot.cpp
 
 HEADERS += \
     src/gui/headers/causticdialog.h \
@@ -59,6 +61,7 @@ HEADERS += \
     src/gui/headers/modelsdialog.h \
     src/gui/headers/obipcell.h \
     src/gui/headers/obipdialog.h \
+    src/gui/headers/simulationdialog.h \
     src/gui/headers/sourcegraph.h \
     src/gui/headers/sourcegraphpoint.h \
     src/gui/headers/trackdialog.h \
@@ -86,7 +89,8 @@ HEADERS += \
     src/models/headers/spiralmodel.h \
     src/models/headers/transparentspheremodel.h \
     src/models/headers/truncatedkingmodel.h \
-    src/models/headers/uniformringmodel.h
+    src/models/headers/uniformringmodel.h \
+    src/libraries/qcustomplot.h
 
 FORMS += \
     src/gui/forms/causticdialog.ui \
@@ -99,6 +103,7 @@ FORMS += \
     src/gui/forms/modelsdialog.ui \
     src/gui/forms/obipcell.ui \
     src/gui/forms/obipdialog.ui \
+    src/gui/forms/simulationdialog.ui \
     src/gui/forms/sourcegraph.ui \
     src/gui/forms/trackdialog.ui
 

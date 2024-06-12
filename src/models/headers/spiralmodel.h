@@ -7,6 +7,8 @@ class SpiralModel : public Model
 {
 public:
     SpiralModel();
+    double jacobian(double x, double y) override;
+    void setAlphas(double x1, double x2) override;
 };
 
 #endif // SPIRALMODEL_H

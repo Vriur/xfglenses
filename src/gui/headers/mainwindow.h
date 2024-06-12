@@ -12,6 +12,7 @@
 #include "src/gui/headers/modelsdialog.h"
 #include "src/gui/headers/obipdialog.h"
 #include "src/gui/headers/trackdialog.h"
+#include "src/gui/headers/simulationdialog.h"
 
 #include "src/logic/headers/simulationparameters.h"
 
@@ -81,6 +82,8 @@ private slots:
 
     void startAnimation(QTimeLine *timer, double initialX, double initialY, double finalX, double finalY);
 
+    void on_SimulationBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     CausticDialog *causticDialog;
@@ -90,5 +93,6 @@ private:
     ModelsDialog *modelsDialog;
     OBIPDialog *obipDialog;
     TrackDialog *trackDialog;
+    SimulationDialog *simulationDialog;
 };
 #endif // MAINWINDOW_H

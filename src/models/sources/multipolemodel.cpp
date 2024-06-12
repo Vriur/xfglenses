@@ -3,7 +3,6 @@
 MultipoleModel::MultipoleModel(){
     this->setName("Multipole Model");
 
-    this->parameters.push_back(new ModelParameter("E", 1.00, 0.00, 4.00));
     this->parameters.push_back(new ModelParameter("Theta", 0.00, 0.00, 360.00));
     this->parameters.push_back(new ModelParameter("Gamma", 0.05, 0.00, 4.00));
     this->parameters.push_back(new ModelParameter("Sigma", 0.05, 0.00, 4.00));
@@ -16,4 +15,12 @@ MultipoleModel::MultipoleModel(){
     this->parameters.push_back(new ModelParameter("Qxx", 0.10, -1.00, 1.00));
     this->parameters.push_back(new ModelParameter("Qxy", 0.00, -1.00, 1.00));
     this->parameters.push_back(new ModelParameter("Qyy", -0.10, -1.00, 1.00));
+}
+
+double MultipoleModel::jacobian(double x, double y){
+    return x + y;
+}
+
+void MultipoleModel::setAlphas(double x1, double x2){
+    alpha1 = x1 + x2;
 }

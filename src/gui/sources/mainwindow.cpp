@@ -83,6 +83,12 @@ void MainWindow::on_TrackBtn_clicked()
     this->trackDialog->show();
 }
 
+void MainWindow::on_SimulationBtn_clicked()
+{
+    this->simulationDialog = new SimulationDialog(this, this->simulationModels, this->simulationParameters);
+    this->simulationDialog->show();
+}
+
 void MainWindow::on_PrintBtn_clicked()
 {
     // El botón print guarda en data sin preguntar, es decir, no hay vista previa.
