@@ -147,6 +147,9 @@
            <height>0</height>
           </size>
          </property>
+         <property name="decimals">
+          <number>4</number>
+         </property>
          <property name="singleStep">
           <double>0.010000000000000</double>
          </property>
@@ -166,6 +169,9 @@
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="decimals">
+          <number>4</number>
          </property>
          <property name="singleStep">
           <double>0.010000000000000</double>

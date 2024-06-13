@@ -52,7 +52,7 @@ void MainWindow::on_HelpBtn_clicked()
 
 void MainWindow::on_ImageFileBtn_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, "File topa load", "./", tr("Images (*.png *.jpeg *.jpg)"));
+    QString fileName = QFileDialog::getOpenFileName(this, "File to load", "./", tr("Images (*.png *.jpeg *.jpg)"));
     this->simulationParameters.setImageFilePath(fileName.toStdString());
 }
 

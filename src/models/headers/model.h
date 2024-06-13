@@ -68,9 +68,9 @@ public:
         int iterator = 0;
 
         while(iterator < (int) this->parameters.size() && !findParameter){
-            if(name.compare(this->parameters.at(iterator)->getName())){
+            if(name.compare(this->parameters.at(iterator)->getName()) == 0){
                 parameter = this->parameters.at(iterator);
-                iterator = this->parameters.size();
+                findParameter = true;
             }
             ++iterator;
         }

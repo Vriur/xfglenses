@@ -48,6 +48,14 @@ double NISModel::jacobian(double x, double y){
     j21  = j12;
     j22 -= kappa * ((pow(xbar1, 2) - pow(xbar0, 2)) * xc * (1.0 - xc / sqrt(s2)) / radiusE4 + pow(xbar0, 2) / (radiusE2 * sqrt(s2)));
 
+    // Nuevo
+    double funcnis = sqrt(s2) - xc;
+    j11 -= kappa * (funcnis/ radiusE2 + (2 * xc * funcnis - radiusE2) / (radiusE4 * sqrt(radiusE2 + pow(xc, 2))) * pow(xbar0, 2));
+    j12 -= kappa * ((2 * xc * funcnis - radiusE2) / (radiusE4 * sqrt(radiusE2 + pow(xc, 2))) * xbar0 * xbar1);
+    j21 = j12;
+    j22 -= kappa * (funcnis/ radiusE2 + (2 * xc * funcnis - radiusE2) / (radiusE4 * sqrt(radiusE2 + pow(xc, 2))) * pow(xbar1, 2));
+    //
+
     /*if(blackHole == 1) {
         jbh11 -= (pow(xbar1, 2) - pow(xbar0, 2)) / radiusE4;
         jbh12 += (2.0 * xbar0 * xbar1) / radiusE4;

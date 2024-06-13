@@ -1,5 +1,7 @@
 #include "../headers/sismodel.h"
 
+#include <QDebug>
+
 SISModel::SISModel(){
     this->setName("SIS");
 
@@ -17,10 +19,6 @@ double SISModel::jacobian(double x, double y){
     double detJ = 0.00;
     double xbar0 = 0.00;
     double xbar1 = 0.00;
-    double jbh11 = 0.00;
-    double jbh12 = 0.00;
-    double jbh21 = 0.00;
-    double jbh22 = 0.00;
     double radiusE = 0.00;
     double radiusE2 = 0.00;
 
@@ -46,18 +44,7 @@ double SISModel::jacobian(double x, double y){
     j21  = j12;
     j22 -= rbeta * (pow(xbar0, 2) + alpha * pow(xbar1, 2));
 
-    /*
-        double radiusE4 = 0.00;
-        radiusE4 = pow(radiusE2, 2);
-        if(blackHole == true) {
-            jbh11 -= (pow(xbar1, 2) - pow(xbar0, 2)) / radiusE4;
-            jbh12 += (2.0 * xbar0 * xbar1) / radiusE4;
-            jbh21  = j12;
-            jbh22 -= (pow(xbar0, 2) - pow(xbar1, 2)) / radiusE4;
-        }
-    */
-
-    detJ = j11 * j22 - j12 * j21 + jbh11 * jbh22 - jbh12 * jbh21;
+    detJ = (j11 * j22) - (j12 * j21);
 
     return detJ;
 }
